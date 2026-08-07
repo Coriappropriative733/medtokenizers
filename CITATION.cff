@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: medtokenizers
+abstract: >-
+  Continuous and discrete tokenization modules for 2D and 3D medical
+  imaging, including VAE/AE, VQ/FSQ/LFQ/ResidualFSQ, and TiTok tokenizers with
+  training and evaluation infrastructure.
+type: software
+authors:
+  - given-names: Liam
+    family-names: Chalcroft
+    email: liamchalcroft@gmail.com
+version: 0.1.0
+date-released: "2026-08-07"
+license: MIT
+repository-code: "https://github.com/liamchalcroft/medtokenizers"
+url: "https://github.com/liamchalcroft/medtokenizers"
+keywords:
+  - medical-imaging
+  - tokenizer
+  - variational-autoencoder
+  - vector-quantization
+  - pytorch
+  - mri
+preferred-citation:
+  type: article
+  title: "Tokenizer-Generator Coupling in Medical Image Generation"
+  authors:
+    - given-names: Liam
+      family-names: Chalcroft
+  year: 2026
+  notes: "arXiv preprint, to appear"

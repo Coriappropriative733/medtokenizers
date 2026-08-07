@@ -1,0 +1,46 @@
+# Changelog
+
+All notable changes to this project are documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.1.0] - 2026-08-07
+
+First public release, accompanying the paper *Tokenizer-Generator Coupling in
+Medical Image Generation*.
+
+### Added
+
+- Continuous tokenizers (`ContinuousTokenizer`, AE and VAE formulations) and
+  discrete tokenizers (`DiscreteTokenizer`, VQ/FSQ/LFQ/ResidualFSQ heads) over a
+  shared encoder-decoder backbone, for 2D images and 3D volumes.
+- `MAISITokenizer` (fixed NVIDIA MAISI configuration), `TiTokTokenizer` (1D
+  transformer tokenizer producing a fixed-length sequence), and the experimental
+  `RAETokenizer` (frozen foundation-model encoder).
+- Training infrastructure: trainer, reconstruction and adversarial losses, patch,
+  multiscale and StyleGAN discriminators, callbacks, and NaN tracking.
+- Evaluation: PSNR, SSIM, LPIPS, perplexity, and codebook usage, with
+  `TokenizerEvaluator` to run them over a loader.
+- Dataset tokenization to per-split `.npz` files via
+  `scripts/tokenize_dataset.py`, plus `save_indices` / `load_indices` and
+  `save_latents` / `load_latents`.
+- HuggingFace Hub integration through `from_pretrained()` and upload helpers.
+- A simulated BrainWeb T1-weighted brain volume bundled inside the package and
+  resolved by `example_volume_path()`, so the volumetric example and tests run
+  from an installed wheel without a download. The volume is simulated rather
+  than acquired data; provenance and citation terms are in
+  `src/medtokenizers/assets/README.md`.
+- `py.typed` marker, so downstream type checkers consume the library's hints.
+- MIT `LICENSE`, `NOTICE`, and `THIRD_PARTY_NOTICES.md`, with per-file SPDX
+  attribution on code derived from CompVis latent-diffusion,
+  lucidrains/vector-quantize-pytorch, NVIDIA Cosmos-Tokenizer, and MONAI/MAISI.
+- Continuous integration across Python 3.10 to 3.12 with lint, test, and
+  coverage lanes, a `.pre-commit-config.yaml`, and community health files
+  (`CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `CITATION.cff`).
+
+### Security
+
+- All `torch.load` calls use `weights_only=True`. Checkpoints from untrusted
+  sources should still be treated as untrusted input; see `SECURITY.md`.

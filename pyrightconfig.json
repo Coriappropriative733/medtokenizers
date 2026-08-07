@@ -1,0 +1,17 @@
+{
+  "include": ["src"],
+  "exclude": [
+    "**/__pycache__",
+    "**/node_modules",
+    "htmlcov"
+  ],
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.10",
+  "pythonPlatform": "All",
+  "typeCheckingMode": "basic",
+  "reportCallIssue": "warning",
+  "reportArgumentType": "warning",
+  "reportAttributeAccessIssue": "warning",
+  "reportReturnType": "warning"
+}

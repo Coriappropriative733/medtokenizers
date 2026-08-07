@@ -1,0 +1,47 @@
+medtokenizers
+Copyright 2026 Liam Chalcroft
+
+This product includes software developed by Liam Chalcroft and contributors,
+licensed under the MIT License.
+
+This product includes software derived from the following third-party
+open-source projects. The original copyright notices and license terms apply to
+those portions; see THIRD_PARTY_NOTICES.md for the full mapping of source files
+to upstream projects.
+
+  * CompVis latent-diffusion / Stable Diffusion / taming-transformers
+    (https://github.com/CompVis/latent-diffusion), Copyright (c) 2021-2022 CompVis
+    and contributors. Licensed under the MIT License.
+    Derived in: src/medtokenizers/modules/layers.py
+
+  * vector-quantize-pytorch by Phil Wang (lucidrains)
+    (https://github.com/lucidrains/vector-quantize-pytorch),
+    Copyright (c) 2020 Phil Wang. Licensed under the MIT License.
+    The Finite Scalar Quantization scheme additionally derives from the JAX
+    reference accompanying Mentzer et al., "Finite Scalar Quantization: VQ-VAE
+    Made Simple" (arXiv:2309.15505).
+    Derived in: src/medtokenizers/modules/quant.py
+
+  * NVIDIA Cosmos-Tokenizer
+    (https://github.com/NVIDIA/Cosmos-Tokenizer),
+    Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. Licensed under the
+    Apache License, Version 2.0.
+    Derived in: src/medtokenizers/modules/patch.py
+
+  * MONAI / NVIDIA MAISI (AutoencoderKlMaisi and VAE Gaussian posterior)
+    (https://github.com/Project-MONAI/MONAI), Copyright (c) MONAI Consortium.
+    Licensed under the Apache License, Version 2.0. NVIDIA MAISI model *weights*
+    are distributed separately under the NVIDIA Source Code License (NSCLv1) and
+    are NOT covered by this repository's license.
+    Derived in: src/medtokenizers/modules/distributions.py,
+    src/medtokenizers/networks/nvidia_maisi.py
+
+This product bundles one simulated (non-human-subject) data file that is not
+covered by this repository's MIT License:
+
+  * BrainWeb Simulated Brain Database
+    (https://brainweb.bic.mni.mcgill.ca/brainweb/), McConnell Brain Imaging
+    Centre, Montreal Neurological Institute, McGill University. BrainWeb
+    publishes no formal license and states a citation requirement instead.
+    Bundled as: assets/t1w_brainweb.nii.gz
+    See assets/README.md for the requested citations.

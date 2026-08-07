@@ -1,0 +1,42 @@
+# Ruff configuration for MRI tokenizers
+
+[lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+]
+
+ignore = [
+    "F722",  # Jaxtyping annotations cause false positives
+    "F821",  # Jaxtyping shape strings trigger undefined name false positives
+    "UP037", # Jaxtyping requires quoted type annotation strings
+    "E501",  # Line too long (handled by formatter)
+    "N812",  # torch.nn.functional as F is standard PyTorch idiom
+    # Python 3.9 compatibility - these features require Python 3.10+
+    "UP006", # Use `list` instead of `List` - list[X] requires 3.9+ at runtime
+    "UP007", # Use `X | Y` for type unions - requires 3.10+
+    "UP035", # Import from collections.abc - Iterable import location
+    "UP045", # Optional[X] needed for Python 3.9 compatibility (X | None is 3.10+)
+    "B905",  # zip() without strict= - strict parameter requires 3.10+
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["F401", "F841"]  # Allow unused imports and variables in tests
+"src/medtokenizers/evaluation/metrics.py" = ["N806"]  # C1/C2 are mathematical constants
+"src/medtokenizers/modules/utils.py" = ["N802"]  # Normalize matches PyTorch naming
+"src/medtokenizers/modules/*" = ["N806"]  # B/C/H/W/D are PyTorch dimension conventions
+"src/medtokenizers/networks/*" = ["N806"]  # B/C/H/W/D are PyTorch dimension conventions
+"src/medtokenizers/training/discriminators/*" = ["N806"]  # Conv matches PyTorch class naming
+"src/medtokenizers/training/callbacks.py" = ["B024", "B027"]  # Callback is a mixin base class
+"examples/*" = ["F841"]  # Demo scripts have intentionally unused variables
+"scripts/*" = ["N806", "E402", "F841"]  # CLI scripts: dim/class-holding vars, sys.path bootstrapping, demo vars
+
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
