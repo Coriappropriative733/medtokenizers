@@ -14,7 +14,7 @@ See [Citation](#citation).
 ## Install
 
 ```bash
-pip install -e ".[test]"
+pip install medtokenizers
 ```
 
 Requires Python 3.10+ and PyTorch 2.0+. Tested on Linux and macOS. A CUDA GPU
@@ -25,6 +25,14 @@ For a CPU-only install, take PyTorch from its CPU index first so `torch` and
 
 ```bash
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+pip install medtokenizers
+```
+
+To work on the library itself, install from a checkout instead:
+
+```bash
+git clone https://github.com/liamchalcroft/medtokenizers.git
+cd medtokenizers
 pip install -e ".[test]"
 ```
 
